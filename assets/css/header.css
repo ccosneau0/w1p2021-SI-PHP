@@ -1,0 +1,116 @@
+.top_bar {
+  width: 100%;
+  height: 50px;
+  background-color: #00387a;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+}
+
+.nav_logo a {
+  color: #ffffff;
+  font-family: 'Righteous', sans-serif;
+  font-size: 20px;
+  letter-spacing: .2rem;
+  /* margin-left: 6px; */
+}
+
+.nav_logo img {
+  width: 26px;
+  height: 26px;
+  margin-left: 20px;
+}
+
+nav {
+  float: right;
+  right: 1px;
+  position: absolute;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 10px;
+}
+
+nav a:hover {
+  border-bottom: 3px solid #ffffff;
+}
+
+.contain {
+  top: 70px;
+  position: relative;
+  padding: 0 10px;
+  width: 75%;
+  min-width: 950px;
+}
+
+.column {
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #00387a;
+  border-radius: 5px;
+  box-shadow: 2px 2px 1px #00387a;
+  z-index: -1;
+}
+
+.user_details {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 250px;
+  float: left;
+  margin-bottom: 20px;
+}
+
+.user_details img {
+  width: 40%;
+  height: 40%;
+  margin-right: 10px;
+  border-radius: 50px;
+}
+
+.user_details_left_right {
+  width: 125px;
+  display: inline-block;
+  position: absolute;
+}
+
+.main_column {
+  float: right;
+  width: 65%;
+  z-index: -1;
+}
+
+.post_form {
+  width: 100%;
+}
+
+.post_form textarea {
+  width: 80%;
+  height: 60px;
+  border-radius: 5px;
+  margin-right: 5px;
+  border: 1px solid #E3E4E0;
+  font-size: 12px;
+}
+
+.status_post {
+  width: 96%;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.post_profile_pic {
+  float: left;
+  margin-right: 7px;
+}
+
+.post_profile_pic img {
+  border-radius: 25px;
+}
+
+textarea:focus {
+  outline: 0;
+}

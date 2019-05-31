@@ -26,7 +26,7 @@ class Post {
         $user_to = "none";
       }
 
-      // Faire un post
+      // Enregistrer publication dans la BDD
       $query = mysqli_query($this->con, "INSERT INTO posts VALUES('', '$body', '$added_by', '$user_to', '$date_added', 'no', 'no', '0')");
       $returned_id = mysqli_insert_id($this->con);
 
@@ -68,6 +68,19 @@ class Post {
       $first_name = $user_row['first_name'];
       $last_name = $user_row['last_name'];
       $profile_pic = $user_row['profile_pic'];
+
+      ?>
+      <script>
+        function toggle<?php echo $id; ?>() {
+          var element = document.getElementById("toggleComment<?php echo $id; ?>");
+
+          if(element.style.display == "block")
+            element.style.display = "none";
+          else
+            element.style.display = "block";
+        }
+      </script>
+      <?
 
       // Ajout depuis combien de temps la publication a été publiée
       $date_time_now = date("Y-m-d H:i:s");
@@ -130,8 +143,8 @@ class Post {
           $time_message = $interval->s . " secondes";
         }
       }
-
-      $str .= "<div class='status_post'>
+      // Poster un commentaire lorsqu'on clique
+      $str .= "<div class='status_post' onClick='javascript:toggle$id()'>
                 <div class='post_profile_pic'>
                   <img src='$profile_pic' width='50'>
                 </div>
@@ -143,6 +156,9 @@ class Post {
                   <br>
                 </div>
 
+              </div>
+              <div class='post_comment' id='toggleComment$id' style='display:none;'>
+                <iframe src='comment.php?post_id=$id' id='comment_iframe' frameborder='0'></iframe>
               </div>
               <hr>";
     }

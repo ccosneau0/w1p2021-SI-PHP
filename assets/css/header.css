@@ -92,7 +92,7 @@ nav a:hover {
   height: 60px;
   border-radius: 5px;
   margin-right: 5px;
-  border: 1px solid #E3E4E0;
+  border: 1px solid #00387a;
   font-size: 12px;
 }
 
@@ -113,4 +113,29 @@ nav a:hover {
 
 textarea:focus {
   outline: 0;
+}
+
+#comment_iframe {
+  max-height: 250px;
+  width: 100%;
+  background-color: #E3E4E0;
+  border-radius: 3px;
+}
+
+.comment_section {
+  padding: 0 5px 5px 5px;
+}
+
+.comment_section img {
+  margin: 0 3px 3px 3px;
+  border-radius: 25px;
+}
+
+#comment_form textarea {
+  width: 85%;
+  height: 35px;
+  border-radius: 5px;
+  color: #00387a;
+  font-size: 14px;
+  margin: 3px 3px 3px 5px;
 }
